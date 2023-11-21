@@ -1,0 +1,17 @@
+<h2 class="text-success"><%= @article.title %></h2>
+<div id="mon_id"><%= @article.content %></div>
+
+<br>
+<div class="btn link btn-group" style="text-decoration: none;">
+  <%= link_to "Modifier", edit_article_path(@article) %>
+  </div>
+<br>
+<div class="btn link btn-group">
+  <%= link_to "Supprimer", article_path(@article),
+      data: {turbo_method: "delete", turbo_confirm: "Etes vous sur?"}
+  %>
+  </div>
+<br>
+<div class="btn link btn-group">
+<%= link_to "Retour à la liste", articles_path%>
+</div>
